@@ -12,8 +12,8 @@ try {
             SET formaat = :formaat,
                 saus = :saus,
                 bonen = :bonen,
-                rijst = :rijst,
-            WHERE id = :id";
+                rijst = :rijst
+            WHERE id= :id";
 
   $stmt = $conn->prepare($sql);
 
@@ -37,6 +37,6 @@ try {
   echo $sql . "<br>" . $e->getMessage();
 }
 
-
+header("Refresh: 2; url = ./read.php");
 
 $conn = null;
